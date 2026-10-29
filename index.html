@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>F1x Anarchy — Күзгі Маусым</title>
+    <title>F1x Anarchy — Күзгі Маусым & Скидкалар 25%</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,7 +23,7 @@
                         }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif']
+                        sans: ['Montserrat', 'Inter', 'sans-serif']
                     }
                 }
             }
@@ -33,11 +33,10 @@
     <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* Global Reset & Base Styles */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -48,9 +47,9 @@
         html, body {
             max-width: 100%;
             overflow-x: hidden;
-            background-color: #0f0a06;
+            background-color: #0d0905;
             color: #f3f4f6;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
         /* Animated Canvas Background */
@@ -66,25 +65,25 @@
 
         /* Glassmorphism Effects */
         .glass-panel {
-            background: rgba(24, 16, 10, 0.8);
+            background: rgba(24, 16, 10, 0.85);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(245, 158, 11, 0.2);
+            border: 1px solid rgba(245, 158, 11, 0.25);
             box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
         }
 
         .glass-card {
-            background: rgba(35, 22, 12, 0.7);
+            background: rgba(35, 22, 12, 0.8);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(217, 119, 6, 0.2);
+            border: 1px solid rgba(217, 119, 6, 0.25);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .glass-card:hover {
             border-color: rgba(251, 191, 36, 0.6);
             transform: translateY(-4px);
-            box-shadow: 0 12px 25px -5px rgba(249, 115, 22, 0.25);
+            box-shadow: 0 12px 25px -5px rgba(249, 115, 22, 0.3);
         }
 
         /* Glowing Effects */
@@ -92,13 +91,14 @@
             text-shadow: 0 0 15px rgba(249, 115, 22, 0.6), 0 0 30px rgba(217, 119, 6, 0.4);
         }
 
-        .glow-button {
-            box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
-            transition: all 0.3s ease;
+        .badge-discount {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            animation: pulse-slow 2s infinite;
         }
 
-        .glow-button:hover {
-            box-shadow: 0 0 30px rgba(249, 115, 22, 0.7);
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         /* Custom Scrollbar */
@@ -106,7 +106,7 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #0f0a06;
+            background: #0d0905;
         }
         ::-webkit-scrollbar-thumb {
             background: #d97706;
@@ -130,20 +130,20 @@
 
     <div class="relative z-10 flex flex-col min-h-screen">
         
-        <!-- Navbar -->
+        <!-- Header / Navbar -->
         <header class="w-full px-4 sm:px-8 py-4 sticky top-0 z-40 glass-panel border-b border-amber-500/20">
             <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
                 
                 <!-- Logo & Title -->
                 <a href="#" class="flex items-center space-x-3 group">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white font-extrabold text-xl shadow-lg group-hover:scale-105 transition-transform">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white font-black text-2xl shadow-lg group-hover:scale-105 transition-transform">
                         F1
                     </div>
                     <div class="flex flex-col">
                         <span class="text-xl sm:text-2xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-amber-200">
                             F1X ANARCHY
                         </span>
-                        <span class="text-[10px] text-amber-400/80 font-semibold tracking-widest uppercase">
+                        <span class="text-[10px] text-amber-400/80 font-bold tracking-widest uppercase">
                             🍁 Autumn Season
                         </span>
                     </div>
@@ -151,18 +151,18 @@
 
                 <!-- IP Copy & Social Links -->
                 <div class="flex flex-wrap items-center justify-center gap-3 w-full sm:w-auto">
-                    <!-- IP Button -->
-                    <button onclick="copyIP()" class="flex-1 sm:flex-none flex items-center justify-center space-x-2.5 px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-900/40 to-orange-900/40 border border-amber-500/40 hover:border-amber-400 text-amber-200 hover:text-white transition-all duration-300 group">
+                    <!-- Server IP Button -->
+                    <button onclick="copyIP()" class="flex-1 sm:flex-none flex items-center justify-center space-x-3 px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-900/40 to-orange-900/40 border border-amber-500/40 hover:border-amber-400 text-amber-200 hover:text-white transition-all duration-300 group">
                         <i class="fa-solid fa-server text-amber-400 group-hover:rotate-12 transition-transform"></i>
                         <div class="text-left text-xs sm:text-sm">
-                            <span class="font-bold block text-white">f1x.minerent.io</span>
-                            <span class="text-[11px] text-amber-300/70">PORT: 19151</span>
+                            <span class="font-black block text-white">f1x.mcmc.kz</span>
+                            <span class="text-[11px] text-amber-300/80 font-bold">PORT: 19151</span>
                         </div>
                         <i class="fa-regular fa-copy ml-1 text-xs opacity-70 group-hover:opacity-100"></i>
                     </button>
 
                     <!-- Telegram Button -->
-                    <a href="https://t.me/f1xanarchy" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-sky-600/20 hover:bg-sky-600/30 border border-sky-500/40 text-sky-300 hover:text-white text-xs sm:text-sm font-semibold transition-all duration-300">
+                    <a href="https://t.me/f1xanarchy" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-sky-600/20 hover:bg-sky-600/30 border border-sky-500/40 text-sky-300 hover:text-white text-xs sm:text-sm font-bold transition-all duration-300">
                         <i class="fa-brands fa-telegram text-base text-sky-400"></i>
                         <span>Канал</span>
                     </a>
@@ -179,8 +179,8 @@
                 <div class="absolute -top-24 -left-24 w-60 h-60 bg-orange-600/20 rounded-full blur-3xl pointer-events-none"></div>
                 <div class="absolute -bottom-24 -right-24 w-60 h-60 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
-                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-red-500/20 border border-red-500/40 text-red-300 text-xs sm:text-sm font-black mb-6 animate-pulse">
-                    <i class="fa-solid fa-fire text-red-500"></i>
+                <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full badge-discount text-white text-xs sm:text-sm font-black mb-6 shadow-lg">
+                    <i class="fa-solid fa-fire text-yellow-300"></i>
                     <span>🔥 БАРЛЫҚ ТАУАРЛАРҒА 25% ЖЕҢІЛДІК (СКИДКА)! ⏳</span>
                 </div>
 
@@ -188,12 +188,12 @@
                     F1X ANARCHY <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 glow-text">СЕРВЕРІ</span>
                 </h1>
 
-                <p class="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg mb-8 leading-relaxed font-normal">
+                <p class="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base md:text-lg mb-8 leading-relaxed font-medium">
                     Қазақстандағы №1 Анархия сервері! Өз кланыңды құр, ресурстар жина, қарсыластарыңды талқандап, сервердің ең мықты билеушісіне айнал!
                 </p>
 
                 <!-- Telegram CTA Banner Box -->
-                <div class="max-w-md mx-auto p-4 rounded-2xl bg-gradient-to-r from-sky-950/60 to-blue-950/60 border border-sky-500/30 flex items-center justify-between gap-4">
+                <div class="max-w-md mx-auto p-4 rounded-2xl bg-gradient-to-r from-sky-950/60 to-blue-950/60 border border-sky-500/30 flex items-center justify-between gap-4 shadow-xl">
                     <div class="flex items-center space-x-3 text-left">
                         <div class="w-12 h-12 rounded-xl bg-sky-500/20 flex items-center justify-center text-sky-400 text-2xl flex-shrink-0">
                             <i class="fa-brands fa-telegram"></i>
@@ -203,29 +203,26 @@
                             <p class="text-xs text-sky-200/70">Жаңалықтар, конкурстар мен ивенттер!</p>
                         </div>
                     </div>
-                    <a href="https://t.me/f1xanarchy" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-xs shadow-lg transition-all flex-shrink-0 whitespace-nowrap">
+                    <a href="https://t.me/f1xanarchy" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-xs shadow-lg transition-all flex-shrink-0 whitespace-nowrap">
                         ЖАЗЫЛУ <i class="fa-solid fa-arrow-right ml-1"></i>
                     </a>
                 </div>
             </section>
 
-            <!-- Navigation Categories Tabs -->
+            <!-- Tabs Navigation -->
             <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8">
-                <button onclick="switchTab('ranks')" id="tab-ranks" class="tab-btn active px-4 sm:px-6 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center space-x-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-lg">
+                <button onclick="switchTab('ranks')" id="tab-ranks" class="tab-btn active px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center space-x-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-lg">
                     <span>🛡️ Донат Дәрежелер</span>
                 </button>
-                <button onclick="switchTab('don-cases')" id="tab-don-cases" class="tab-btn px-4 sm:px-6 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center space-x-2 glass-card text-gray-300 hover:text-white">
-                    <span>🎁 Донат Кейстер</span>
+                <button onclick="switchTab('cases')" id="tab-cases" class="tab-btn px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center space-x-2 glass-card text-gray-300 hover:text-white">
+                    <span>🎁 Барлық Кейстер</span>
                 </button>
-                <button onclick="switchTab('money-cases')" id="tab-money-cases" class="tab-btn px-4 sm:px-6 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center space-x-2 glass-card text-gray-300 hover:text-white">
-                    <span>💰 Ақшалай кейстер</span>
-                </button>
-                <button onclick="switchTab('unban')" id="tab-unban" class="tab-btn px-4 sm:px-6 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center space-x-2 glass-card text-gray-300 hover:text-white">
+                <button onclick="switchTab('unban')" id="tab-unban" class="tab-btn px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center space-x-2 glass-card text-gray-300 hover:text-white">
                     <span>🔓 Разбан</span>
                 </button>
             </div>
 
-            <!-- TAB 1: DONATE RANKS -->
+            <!-- TAB 1: RANKS -->
             <div id="section-ranks" class="tab-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
                 <!-- Rank 1: Жасақ -->
@@ -398,7 +395,7 @@
                     <div>
                         <div class="flex justify-between items-start mb-4 mt-2">
                             <span class="text-4xl">⚡</span>
-                            <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs font-semibold">Топ дәреже</span>
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs font-semibold">TOP TYPE</span>
                         </div>
                         <h3 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-red-400 mb-2">[ҚАҒАН]</h3>
                         <p class="text-xs text-gray-400 mb-4">Сервердегі ең жоғарғы, шексіз билік мен құқықтар.</p>
@@ -426,119 +423,165 @@
 
             </div>
 
-            <!-- TAB 2: DONATION CASES -->
-            <div id="section-don-cases" class="tab-content hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- TAB 2: COMBINED ALL CASES -->
+            <div id="section-cases" class="tab-content hidden space-y-10">
                 
-                <!-- 1 Case -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-amber-500 text-center relative">
-                    <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
-                    <div>
-                        <div class="text-5xl mb-4">📦</div>
-                        <h3 class="text-xl font-bold text-white mb-2">1 Донат Кейс</h3>
-                        <p class="text-xs text-gray-400 mb-6">Кез келген донат түсу мүмкіндігі бар құпия кейс.</p>
-                        <div class="mb-6">
-                            <span class="text-xs line-through text-gray-500 block mb-1">590 ₸</span>
-                            <span class="text-3xl font-black text-amber-400">442,5 ₸</span>
+                <!-- Category 1: Донат Кейстер -->
+                <div>
+                    <h3 class="text-xl font-bold text-amber-400 mb-4 flex items-center gap-2 border-b border-amber-500/20 pb-2">
+                        <span>🎁 Донат Кейстер</span>
+                        <span class="text-xs text-gray-400 font-normal">(Донат дәрежелер түседі)</span>
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-amber-500 text-center relative">
+                            <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
+                            <div>
+                                <div class="text-5xl mb-4">📦</div>
+                                <h4 class="text-xl font-bold text-white mb-2">1 Донат Кейс</h4>
+                                <p class="text-xs text-gray-400 mb-6">Донат ұтып алу мүмкіндігі.</p>
+                                <div class="mb-6">
+                                    <span class="text-xs line-through text-gray-500 block mb-1">590 ₸</span>
+                                    <span class="text-3xl font-black text-amber-400">442,5 ₸</span>
+                                </div>
+                            </div>
+                            <button onclick="openModal('1 Донат Кейс', { '1 кейс': '442,5 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 font-bold text-white shadow-lg text-sm">САТЫП АЛУ</button>
+                        </div>
+
+                        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-orange-500 text-center relative">
+                            <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
+                            <div>
+                                <div class="text-5xl mb-4">📦📦</div>
+                                <h4 class="text-xl font-bold text-white mb-2">3 Донат Кейс</h4>
+                                <p class="text-xs text-gray-400 mb-6">Үш есе жоғары мүмкіндік!</p>
+                                <div class="mb-6">
+                                    <span class="text-xs line-through text-gray-500 block mb-1">1 590 ₸</span>
+                                    <span class="text-3xl font-black text-amber-400">1 192,5 ₸</span>
+                                </div>
+                            </div>
+                            <button onclick="openModal('3 Донат Кейс', { '3 кейс': '1 192,5 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 font-bold text-white shadow-lg text-sm">САТЫП АЛУ</button>
+                        </div>
+
+                        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-yellow-500 text-center relative">
+                            <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
+                            <div>
+                                <div class="text-5xl mb-4">📦📦📦</div>
+                                <h4 class="text-xl font-bold text-white mb-2">5 Донат Кейс</h4>
+                                <p class="text-xs text-gray-400 mb-6">Максималды үнемді жиынтық!</p>
+                                <div class="mb-6">
+                                    <span class="text-xs line-through text-gray-500 block mb-1">2 590 ₸</span>
+                                    <span class="text-3xl font-black text-amber-400">1 942,5 ₸</span>
+                                </div>
+                            </div>
+                            <button onclick="openModal('5 Донат Кейс', { '5 кейс': '1 942,5 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 font-bold text-white shadow-lg text-sm">САТЫП АЛУ</button>
                         </div>
                     </div>
-                    <button onclick="openModal('1 Донат Кейс', { '1 кейс': '442,5 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 font-bold text-white shadow-lg transition-all text-sm">
-                        САТЫП АЛУ
-                    </button>
                 </div>
 
-                <!-- 3 Cases -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-orange-500 text-center relative">
-                    <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
-                    <div>
-                        <div class="text-5xl mb-4">📦📦</div>
-                        <h3 class="text-xl font-bold text-white mb-2">3 Донат Кейс</h3>
-                        <p class="text-xs text-gray-400 mb-6">Үш есе көп мүмкіндік пен бағалы сыйлықтар!</p>
-                        <div class="mb-6">
-                            <span class="text-xs line-through text-gray-500 block mb-1">1 590 ₸</span>
-                            <span class="text-3xl font-black text-amber-400">1 192,5 ₸</span>
+                <!-- Category 2: Қосымша / Ақшалай Кейстер -->
+                <div>
+                    <h3 class="text-xl font-bold text-emerald-400 mb-4 flex items-center gap-2 border-b border-emerald-500/20 pb-2">
+                        <span>💰 Ақшалай / Қосымша Кейстер</span>
+                        <span class="text-xs text-gray-400 font-normal">(Ойын ішіндегі валюта мен ресурстар)</span>
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-emerald-500 text-center relative">
+                            <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
+                            <div>
+                                <div class="text-5xl mb-4">💰</div>
+                                <h4 class="text-xl font-bold text-white mb-2">1 Ақшалай Кейс</h4>
+                                <p class="text-xs text-gray-400 mb-6">Ойын ішіндегі бастапқы капитал.</p>
+                                <div class="mb-6">
+                                    <span class="text-xs line-through text-gray-500 block mb-1">219 ₸</span>
+                                    <span class="text-3xl font-black text-emerald-400">164,25 ₸</span>
+                                </div>
+                            </div>
+                            <button onclick="openModal('1 Ақшалай Кейс', { '1 кейс': '164,25 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 font-bold text-white shadow-lg text-sm">САТЫП АЛУ</button>
+                        </div>
+
+                        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-emerald-500 text-center relative">
+                            <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
+                            <div>
+                                <div class="text-5xl mb-4">💰💰</div>
+                                <h4 class="text-xl font-bold text-white mb-2">5 Ақшалай Кейс</h4>
+                                <p class="text-xs text-gray-400 mb-6">Жылдам дамуға арналған 5 кейс.</p>
+                                <div class="mb-6">
+                                    <span class="text-xs line-through text-gray-500 block mb-1">790 ₸</span>
+                                    <span class="text-3xl font-black text-emerald-400">592,5 ₸</span>
+                                </div>
+                            </div>
+                            <button onclick="openModal('5 Ақшалай Кейс', { '5 кейс': '592,5 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 font-bold text-white shadow-lg text-sm">САТЫП АЛУ</button>
+                        </div>
+
+                        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-emerald-400 text-center relative">
+                            <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
+                            <div>
+                                <div class="text-5xl mb-4">💰💰💰</div>
+                                <h4 class="text-xl font-bold text-white mb-2">10 Ақшалай Кейс</h4>
+                                <p class="text-xs text-gray-400 mb-6">Ең үлкен валюталық жиынтық!</p>
+                                <div class="mb-6">
+                                    <span class="text-xs line-through text-gray-500 block mb-1">1 590 ₸</span>
+                                    <span class="text-3xl font-black text-emerald-400">1 192,5 ₸</span>
+                                </div>
+                            </div>
+                            <button onclick="openModal('10 Ақшалай Кейс', { '10 кейс': '1 192,5 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 font-bold text-white shadow-lg text-sm">САТЫП АЛУ</button>
                         </div>
                     </div>
-                    <button onclick="openModal('3 Донат Кейс', { '3 кейс': '1 192,5 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 font-bold text-white shadow-lg transition-all text-sm">
-                        САТЫП АЛУ
-                    </button>
                 </div>
 
-                <!-- 5 Cases -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-yellow-500 text-center relative">
-                    <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
-                    <div>
-                        <div class="text-5xl mb-4">📦📦📦</div>
-                        <h3 class="text-xl font-bold text-white mb-2">5 Донат Кейс</h3>
-                        <p class="text-xs text-gray-400 mb-6">Максималды үнемдеу және жоғары мүмкіндік!</p>
-                        <div class="mb-6">
-                            <span class="text-xs line-through text-gray-500 block mb-1">2 590 ₸</span>
-                            <span class="text-3xl font-black text-amber-400">1 942,5 ₸</span>
+                <!-- Category 3: Алтын Кейстер (New!) -->
+                <div>
+                    <h3 class="text-xl font-bold text-yellow-300 mb-4 flex items-center gap-2 border-b border-yellow-500/20 pb-2">
+                        <span>✨ Алтын Кейстер</span>
+                        <span class="text-xs text-gray-400 font-normal">(Сирек және премиум заттар)</span>
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-yellow-400 text-center relative">
+                            <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
+                            <div>
+                                <div class="text-5xl mb-4">👑</div>
+                                <h4 class="text-xl font-bold text-white mb-2">1 Алтын Кейс</h4>
+                                <p class="text-xs text-gray-400 mb-6">Премиум ресурстар түсу мүмкіндігі.</p>
+                                <div class="mb-6">
+                                    <span class="text-xs line-through text-gray-500 block mb-1">319 ₸</span>
+                                    <span class="text-3xl font-black text-yellow-300">239,25 ₸</span>
+                                </div>
+                            </div>
+                            <button onclick="openModal('1 Алтын Кейс', { '1 кейс': '239,25 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 text-black font-extrabold shadow-lg text-sm">САТЫП АЛУ</button>
+                        </div>
+
+                        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-yellow-400 text-center relative">
+                            <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
+                            <div>
+                                <div class="text-5xl mb-4">👑👑</div>
+                                <h4 class="text-xl font-bold text-white mb-2">5 Алтын Кейс</h4>
+                                <p class="text-xs text-gray-400 mb-6">5 премиум кейс топтамасы.</p>
+                                <div class="mb-6">
+                                    <span class="text-xs line-through text-gray-500 block mb-1">1 419 ₸</span>
+                                    <span class="text-3xl font-black text-yellow-300">1 064,25 ₸</span>
+                                </div>
+                            </div>
+                            <button onclick="openModal('5 Алтын Кейс', { '5 кейс': '1 064,25 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 text-black font-extrabold shadow-lg text-sm">САТЫП АЛУ</button>
+                        </div>
+
+                        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-yellow-300 text-center relative">
+                            <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
+                            <div>
+                                <div class="text-5xl mb-4">👑👑👑</div>
+                                <h4 class="text-xl font-bold text-white mb-2">10 Алтын Кейс</h4>
+                                <p class="text-xs text-gray-400 mb-6">Ең жоғарғы мүмкіндік пен тиімділік!</p>
+                                <div class="mb-6">
+                                    <span class="text-xs line-through text-gray-500 block mb-1">2 790 ₸</span>
+                                    <span class="text-3xl font-black text-yellow-300">2 092,50 ₸</span>
+                                </div>
+                            </div>
+                            <button onclick="openModal('10 Алтын Кейс', { '10 кейс': '2 092,50 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 text-black font-extrabold shadow-lg text-sm">САТЫП АЛУ</button>
                         </div>
                     </div>
-                    <button onclick="openModal('5 Донат Кейс', { '5 кейс': '1 942,5 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 font-bold text-white shadow-lg transition-all text-sm">
-                        САТЫП АЛУ
-                    </button>
                 </div>
 
             </div>
 
-            <!-- TAB 3: MONEY / EXTRA CASES -->
-            <div id="section-money-cases" class="tab-content hidden grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                <!-- 1 Money Case -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-emerald-500 text-center relative">
-                    <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
-                    <div>
-                        <div class="text-5xl mb-4">💰</div>
-                        <h3 class="text-xl font-bold text-white mb-2">1 Ақша кейс</h3>
-                        <p class="text-xs text-gray-400 mb-6">Ойын ішіндегі ресурстар мен бонустар.</p>
-                        <div class="mb-6">
-                            <span class="text-xs line-through text-gray-500 block mb-1">219 ₸</span>
-                            <span class="text-3xl font-black text-emerald-400">164,25 ₸</span>
-                        </div>
-                    </div>
-                    <button onclick="openModal('1 Ақша кейс', { '1 кейс': '164,25 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 font-bold text-white shadow-lg transition-all text-sm">
-                        САТЫП АЛУ
-                    </button>
-                </div>
-
-                <!-- 5 Money Cases -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-emerald-500 text-center relative">
-                    <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
-                    <div>
-                        <div class="text-5xl mb-4">💰💰</div>
-                        <h3 class="text-xl font-bold text-white mb-2">5 Ақша кейс</h3>
-                        <p class="text-xs text-gray-400 mb-6">Дамуға арналған 5 кейс жиынтығы.</p>
-                        <div class="mb-6">
-                            <span class="text-xs line-through text-gray-500 block mb-1">790 ₸</span>
-                            <span class="text-3xl font-black text-emerald-400">592,5 ₸</span>
-                        </div>
-                    </div>
-                    <button onclick="openModal('5 Ақша кейс', { '5 кейс': '592,5 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 font-bold text-white shadow-lg transition-all text-sm">
-                        САТЫП АЛУ
-                    </button>
-                </div>
-
-                <!-- 10 Money Cases -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-4 border-emerald-400 text-center relative">
-                    <span class="absolute top-3 right-3 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25%</span>
-                    <div>
-                        <div class="text-5xl mb-4">💰💰💰</div>
-                        <h3 class="text-xl font-bold text-white mb-2">10 Ақша кейс</h3>
-                        <p class="text-xs text-gray-400 mb-6">Ең үлкен бонус пен мүмкіндіктер кейсі!</p>
-                        <div class="mb-6">
-                            <span class="text-xs line-through text-gray-500 block mb-1">1 590 ₸</span>
-                            <span class="text-3xl font-black text-emerald-400">1 192,5 ₸</span>
-                        </div>
-                    </div>
-                    <button onclick="openModal('10 Ақша кейс', { '10 кейс': '1 192,5 ₸' })" class="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 font-bold text-white shadow-lg transition-all text-sm">
-                        САТЫП АЛУ
-                    </button>
-                </div>
-
-            </div>
-
-            <!-- TAB 4: UNBAN -->
+            <!-- TAB 3: UNBAN -->
             <div id="section-unban" class="tab-content hidden max-w-xl mx-auto">
                 <div class="glass-card rounded-2xl p-8 text-center border-t-4 border-red-600 relative">
                     <span class="absolute top-4 right-4 px-2 py-0.5 bg-red-500/20 text-red-400 border border-red-500/30 rounded text-[10px] font-black">-25% СКИДКА</span>
@@ -591,15 +634,15 @@
             <!-- Modal Form -->
             <form onsubmit="submitPurchase(event)" class="space-y-5">
                 
-                <!-- Duration Selector (If multiple options exist) -->
+                <!-- Duration / Package Selector -->
                 <div id="durationWrapper" class="hidden">
-                    <label class="block text-xs font-semibold text-gray-300 mb-2">Мерзімді таңдаңыз:</label>
+                    <label class="block text-xs font-semibold text-gray-300 mb-2">Мерзімді / Түрін таңдаңыз:</label>
                     <div id="durationOptions" class="grid grid-cols-2 gap-3">
-                        <!-- Injected via JS -->
+                        <!-- Dynamic Buttons -->
                     </div>
                 </div>
 
-                <!-- Nickname Input -->
+                <!-- Minecraft Nickname Input -->
                 <div>
                     <label for="mcNickname" class="block text-xs font-semibold text-gray-300 mb-2">
                         Minecraft Нигіңізді жазыңыз:
@@ -610,13 +653,13 @@
                     </div>
                 </div>
 
-                <!-- Price Display -->
+                <!-- Price Box -->
                 <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-between">
-                    <span class="text-xs text-gray-300 font-medium">Төлем сомасы:</span>
+                    <span class="text-xs text-gray-300 font-medium">Төлем сомасы (25% скидкамен):</span>
                     <span id="modalPriceDisplay" class="text-2xl font-black text-amber-400">0 ₸</span>
                 </div>
 
-                <!-- Action Button -->
+                <!-- Submit Button -->
                 <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 hover:from-sky-400 hover:to-blue-500 font-bold text-white shadow-xl transition-all flex items-center justify-center space-x-2 text-sm">
                     <i class="fa-brands fa-telegram text-lg"></i>
                     <span>ТӨЛЕМГЕ ӨТУ (@F1x_9o)</span>
@@ -626,7 +669,7 @@
         </div>
     </div>
 
-    <!-- JavaScript Script -->
+    <!-- JavaScript Controls -->
     <script>
         /* ----------------------------------------------------
            Falling Leaves Canvas Animation
@@ -676,7 +719,6 @@
                 ctx.globalAlpha = this.opacity;
                 ctx.fillStyle = this.color;
 
-                // Draw simple leaf shape
                 ctx.beginPath();
                 ctx.moveTo(0, -this.size / 2);
                 ctx.quadraticCurveTo(this.size / 2, 0, 0, this.size / 2);
@@ -687,7 +729,6 @@
             }
         }
 
-        // Initialize 35 leaves
         for (let i = 0; i < 35; i++) {
             leaves.push(new Leaf());
         }
@@ -709,27 +750,23 @@
            Tabs Switching Logic
         ---------------------------------------------------- */
         function switchTab(tabName) {
-            // Hide all contents
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
             
-            // Deactivate all tab buttons
             document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.className = "tab-btn px-4 sm:px-6 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center space-x-2 glass-card text-gray-300 hover:text-white";
+                btn.className = "tab-btn px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center space-x-2 glass-card text-gray-300 hover:text-white";
             });
 
-            // Activate chosen tab
             document.getElementById(`section-${tabName}`).classList.remove('hidden');
             const activeBtn = document.getElementById(`tab-${tabName}`);
-            activeBtn.className = "tab-btn active px-4 sm:px-6 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center space-x-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-lg";
+            activeBtn.className = "tab-btn active px-5 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center space-x-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-lg";
         }
 
         /* ----------------------------------------------------
            Copy Server IP Function
         ---------------------------------------------------- */
         function copyIP() {
-            const serverIP = "f1x.minerent.io:19151";
+            const serverIP = "f1x.mcmc.kz:19151";
             
-            // Using standard execCommand fallback for seamless clipboard copy in iframes
             const dummy = document.createElement("input");
             document.body.appendChild(dummy);
             dummy.value = serverIP;
@@ -737,7 +774,7 @@
             document.execCommand("copy");
             document.body.removeChild(dummy);
 
-            showToast("Server IP көшірілді: f1x.minerent.io:19151");
+            showToast("Server IP көшірілді: f1x.mcmc.kz:19151");
         }
 
         function showToast(msg) {
@@ -780,10 +817,10 @@
 
                     const btn = document.createElement('button');
                     btn.type = 'button';
-                    btn.className = `duration-opt py-2 px-3 rounded-xl text-xs font-bold border transition-all ${
+                    btn.className = `duration-opt py-2.5 px-3 rounded-xl text-xs font-bold border transition-all ${
                         isFirst ? 'bg-amber-500/20 border-amber-400 text-amber-300' : 'bg-black/40 border-gray-700 text-gray-400'
                     }`;
-                    btn.innerText = `${duration} (${priceOptions[duration]} ₸)`;
+                    btn.innerText = `${duration} (${priceOptions[duration]})`;
                     btn.onclick = () => selectDuration(duration, btn);
                     durationOptionsContainer.appendChild(btn);
                 });
@@ -804,9 +841,9 @@
         function selectDuration(duration, element) {
             selectedDuration = duration;
             document.querySelectorAll('.duration-opt').forEach(btn => {
-                btn.className = 'duration-opt py-2 px-3 rounded-xl text-xs font-bold border transition-all bg-black/40 border-gray-700 text-gray-400';
+                btn.className = 'duration-opt py-2.5 px-3 rounded-xl text-xs font-bold border transition-all bg-black/40 border-gray-700 text-gray-400';
             });
-            element.className = 'duration-opt py-2 px-3 rounded-xl text-xs font-bold border transition-all bg-amber-500/20 border-amber-400 text-amber-300';
+            element.className = 'duration-opt py-2.5 px-3 rounded-xl text-xs font-bold border transition-all bg-amber-500/20 border-amber-400 text-amber-300';
             updateModalPrice();
         }
 
@@ -830,14 +867,13 @@
 
             const currentPrice = activePrices[selectedDuration];
             
-            // Custom Telegram pre-filled text
             let text = `Сәлеметсіз бе! Мен F1x Anarchy серверінен сатып алу жасағым келеді:\n\n`;
             text += `🔹 Тауар: ${activeItemTitle}\n`;
             if (selectedDuration) {
-                text += `⏱ Мерзімі: ${selectedDuration}\n`;
+                text += `⏱ Мерзімі/Кейс саны: ${selectedDuration}\n`;
             }
             text += `👤 Нигім: ${nick}\n`;
-            text += `💰 Сомасы: ${currentPrice} ₸\n\n`;
+            text += `💰 Сомасы: ${currentPrice}\n\n`;
             text += `Төлем реквизиттерін жіберіңізші!`;
 
             const encodedText = encodeURIComponent(text);
@@ -847,9 +883,9 @@
             closeModal();
         }
 
-        // Close modal on background click
         document.getElementById('purchaseModal').addEventListener('click', function(e) {
             if (e.target === this) closeModal();
         });
     </script>
 </body>
+</html>
