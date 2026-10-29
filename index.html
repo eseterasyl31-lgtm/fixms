@@ -155,7 +155,7 @@
                     <button onclick="copyIP()" class="flex-1 sm:flex-none flex items-center justify-center space-x-3 px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-900/40 to-orange-900/40 border border-amber-500/40 hover:border-amber-400 text-amber-200 hover:text-white transition-all duration-300 group">
                         <i class="fa-solid fa-server text-amber-400 group-hover:rotate-12 transition-transform"></i>
                         <div class="text-left text-xs sm:text-sm">
-                            <span class="font-black block text-white">f1x.mcmc.kz</span>
+                            <span class="font-black block text-white">f1x.minerent.io</span>
                             <span class="text-[11px] text-amber-300/80 font-bold">PORT: 19151</span>
                         </div>
                         <i class="fa-regular fa-copy ml-1 text-xs opacity-70 group-hover:opacity-100"></i>
@@ -765,7 +765,7 @@
            Copy Server IP Function
         ---------------------------------------------------- */
         function copyIP() {
-            const serverIP = "f1x.mcmc.kz:19151";
+            const serverIP = "f1x.minerent.io:19151";
             
             const dummy = document.createElement("input");
             document.body.appendChild(dummy);
@@ -774,7 +774,7 @@
             document.execCommand("copy");
             document.body.removeChild(dummy);
 
-            showToast("Server IP көшірілді: f1x.mcmc.kz:19151");
+            showToast("Server IP көшірілді: f1x.minerent.io:19151");
         }
 
         function showToast(msg) {
